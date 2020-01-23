@@ -1,0 +1,37 @@
+body{
+	background-color: rgba(0,0,0,.4);
+	font-size: 25px;
+}
+
+
+#titleArea{
+	text-align: center;
+}
+
+#inputDisplay{
+	margin: auto;
+	height: 100px;
+	width: 450px;
+	border: 4px groove gray;
+	margin-top: 25px;
+	background-color: white;
+}
+
+#calculator{
+	margin: auto;
+	height: 700px;
+	width: 500px;
+	border: 4px ridge gray;
+	border-radius: 8px;
+	background-color: rgb(255, 230, 179);
+}
+
+#buttonGrid{
+	display: grid;
+	margin: auto;
+	margin-top: 25px;
+	height: 510px;
+	width: 450px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+}
