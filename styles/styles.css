@@ -3,6 +3,30 @@ body{
 	font-size: 25px;
 }
 
+.button {
+	border: 3px groove gray;
+	font-size: 25px;
+	margin: 5px;
+	border-radius: 8px;
+	background-color: rgba(166, 166, 166, .6)
+}
+
+.button:hover {
+	border: 3px ridge gray;
+	
+}
+
+.operator {
+	background-color: rgba(102, 51, 0, .5);
+}
+
+#clr{
+	grid-column: span 2;
+}
+#equals {
+	grid-column: span 2;
+	background-color: rgba(128, 0, 0, .5);
+}
 
 #titleArea{
 	text-align: center;
@@ -12,7 +36,7 @@ body{
 	margin: auto;
 	height: 100px;
 	width: 450px;
-	border: 4px groove gray;
+	border: 4px ridge gray;
 	margin-top: 25px;
 	background-color: white;
 }
@@ -21,7 +45,7 @@ body{
 	margin: auto;
 	height: 700px;
 	width: 500px;
-	border: 4px ridge gray;
+	border: 4px groove gray;
 	border-radius: 8px;
 	background-color: rgb(255, 230, 179);
 }
@@ -32,6 +56,6 @@ body{
 	margin-top: 25px;
 	height: 510px;
 	width: 450px;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, 1fr);
 }
