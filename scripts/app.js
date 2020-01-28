@@ -4,10 +4,12 @@ var equation = "";
 buttons.addEventListener("click", function(e){
 	var button = e.target.value;
 	if (button === "="){
-		result = operate();
+		equation = operate();
+		setDisplay(result);
 	}
 	else if(button != undefined){
 		equation = stringManager(button);
+		console.log(equation);
 		setDisplay(equation);
 	}
 })
@@ -15,7 +17,10 @@ buttons.addEventListener("click", function(e){
 
 
 function operate(){
-	
+	try
+	result = eval(equation);
+	console.log(result);
+	return result;
 }
 
 function stringManager(button){
@@ -28,7 +33,6 @@ function stringManager(button){
 			return equation;
 		default:
 			equation = equation + button;
-			console.log(equation);
 			return equation;
 	}
 }
