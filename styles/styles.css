@@ -1,5 +1,5 @@
 body{
-	background-color: rgba(0,0,0,.4);
+	background-color: rgba(0,0,0,.2);
 	font-size: 25px;
 }
 
@@ -38,6 +38,7 @@ body{
 	width: 450px;
 	border: 4px ridge gray;
 	margin-top: 25px;
+	font-size: 35px;
 	background-color: white;
 }
 
