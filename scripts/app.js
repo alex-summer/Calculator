@@ -1,39 +1,52 @@
 const buttons = document.getElementById("buttonGrid");
-var equation = "";
+var equationText = "";
 
 buttons.addEventListener("click", function(e){
 	var button = e.target.value;
 	if (button === "="){
-		equation = operate();
-		setDisplay(result);
+		equationText = operate();
+		setDisplay(equationText);
 	}
 	else if(button != undefined){
-		equation = stringManager(button);
-		console.log(equation);
-		setDisplay(equation);
+		equationText = stringManager(button);
+		setDisplay(equationText);
 	}
 })
 
 
 
 function operate(){
-	try
-	result = eval(equation);
-	console.log(result);
-	return result;
+	var result;
+	try{
+		result = eval(equationText);
+		result = result.toFixed(5)
+		return result;
+	}
+	catch{
+		result = "Invalid equation";
+		return result;
+	}
+	
 }
 
 function stringManager(button){
 	switch(button){
 		case "clr":
-			equation = "";
-			return equation;
+			equationText = "";
+			return equationText;
 		case "del":
-			equation = equation.slice(0, -1);
-			return equation;
+			equationText = equationText.slice(0, -1);
+			return equationText;
 		default:
-			equation = equation + button;
-			return equation;
+			switch(true){
+				case (equationText.length <= 24): 
+					equationText += button;
+					return equationText;
+				case (equationText.length > 24):
+					return equationText;
+			}
+				
+			
 	}
 }
 
